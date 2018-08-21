@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		5E80299D212BE65A00F3A2AC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5E8029A4212BE98200F3A2AC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		5E887280211DE73200BDA39B /* flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E887280211DE73200BDA39B /* Flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E887283211DE73200BDA39B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E887285211DE73200BDA39B /* SourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewController.swift; sourceTree = "<group>"; };
 		5E887288211DE73200BDA39B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		5E887281211DE73200BDA39B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E887280211DE73200BDA39B /* flashcards.app */,
+				5E887280211DE73200BDA39B /* Flashcards.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,9 +106,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5E88727F211DE73200BDA39B /* flashcards */ = {
+		5E88727F211DE73200BDA39B /* Flashcards */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E887292211DE73300BDA39B /* Build configuration list for PBXNativeTarget "flashcards" */;
+			buildConfigurationList = 5E887292211DE73300BDA39B /* Build configuration list for PBXNativeTarget "Flashcards" */;
 			buildPhases = (
 				5E88727C211DE73200BDA39B /* Sources */,
 				5E88727D211DE73200BDA39B /* Frameworks */,
@@ -118,9 +118,9 @@
 			);
 			dependencies = (
 			);
-			name = flashcards;
+			name = Flashcards;
 			productName = flashcards;
-			productReference = 5E887280211DE73200BDA39B /* flashcards.app */;
+			productReference = 5E887280211DE73200BDA39B /* Flashcards.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -151,7 +151,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5E88727F211DE73200BDA39B /* flashcards */,
+				5E88727F211DE73200BDA39B /* Flashcards */,
 			);
 		};
 /* End PBXProject section */
@@ -331,7 +331,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.droptheplot.flashcards;
+				PRODUCT_BUNDLE_IDENTIFIER = com.droptheplot.Flashcards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -349,7 +349,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.droptheplot.flashcards;
+				PRODUCT_BUNDLE_IDENTIFIER = com.droptheplot.Flashcards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -368,7 +368,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E887292211DE73300BDA39B /* Build configuration list for PBXNativeTarget "flashcards" */ = {
+		5E887292211DE73300BDA39B /* Build configuration list for PBXNativeTarget "Flashcards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5E887293211DE73300BDA39B /* Debug */,
