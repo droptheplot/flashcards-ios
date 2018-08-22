@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7T9-x9-zwa">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,72 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="vo9-cQ-X23">
+            <objects>
+                <viewController id="7T9-x9-zwa" customClass="AuthViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j7d-7g-Sda">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7xo-27-zLa">
+                                <rect key="frame" x="16" y="170" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqJ-cD-1C4">
+                                <rect key="frame" x="16" y="220" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMx-oZ-uZg">
+                                <rect key="frame" x="120" y="270" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="AuthButton:" destination="7T9-x9-zwa" eventType="touchUpInside" id="fwF-vI-DeJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email or password is incorrect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JW2-uj-aof">
+                                <rect key="frame" x="16" y="132" width="288" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7xo-27-zLa" firstAttribute="top" secondItem="7Rt-Ta-Uuk" secondAttribute="top" constant="150" id="1dX-JT-4Ce"/>
+                            <constraint firstItem="7xo-27-zLa" firstAttribute="top" secondItem="JW2-uj-aof" secondAttribute="bottom" constant="20" id="816-kg-QF6"/>
+                            <constraint firstItem="7xo-27-zLa" firstAttribute="leading" secondItem="7Rt-Ta-Uuk" secondAttribute="leading" constant="16" id="DDG-BP-H3T"/>
+                            <constraint firstItem="7Rt-Ta-Uuk" firstAttribute="trailing" secondItem="oMx-oZ-uZg" secondAttribute="trailing" constant="120" id="ECx-X8-crH"/>
+                            <constraint firstItem="vqJ-cD-1C4" firstAttribute="leading" secondItem="7Rt-Ta-Uuk" secondAttribute="leading" constant="16" id="MKe-5k-04F"/>
+                            <constraint firstItem="oMx-oZ-uZg" firstAttribute="leading" secondItem="7Rt-Ta-Uuk" secondAttribute="leading" constant="120" id="O94-cv-8LZ"/>
+                            <constraint firstItem="JW2-uj-aof" firstAttribute="leading" secondItem="7Rt-Ta-Uuk" secondAttribute="leading" constant="16" id="XCh-lI-ygk"/>
+                            <constraint firstItem="7Rt-Ta-Uuk" firstAttribute="trailing" secondItem="7xo-27-zLa" secondAttribute="trailing" constant="16" id="Xbh-MT-Sft"/>
+                            <constraint firstItem="oMx-oZ-uZg" firstAttribute="top" secondItem="vqJ-cD-1C4" secondAttribute="bottom" constant="20" id="bH6-l9-dcr"/>
+                            <constraint firstItem="vqJ-cD-1C4" firstAttribute="top" secondItem="7xo-27-zLa" secondAttribute="bottom" constant="20" id="ca8-cA-gXq"/>
+                            <constraint firstItem="7Rt-Ta-Uuk" firstAttribute="trailing" secondItem="vqJ-cD-1C4" secondAttribute="trailing" constant="16" id="gxv-GG-msL"/>
+                            <constraint firstItem="7Rt-Ta-Uuk" firstAttribute="trailing" secondItem="JW2-uj-aof" secondAttribute="trailing" constant="16" id="tH2-Ne-RoN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Rt-Ta-Uuk"/>
+                    </view>
+                    <connections>
+                        <outlet property="authButton" destination="oMx-oZ-uZg" id="EfT-IG-NZq"/>
+                        <outlet property="emailTextField" destination="7xo-27-zLa" id="Oy7-Wm-vDD"/>
+                        <outlet property="errorLabel" destination="JW2-uj-aof" id="IDS-jN-v6n"/>
+                        <outlet property="passwordTextField" destination="vqJ-cD-1C4" id="uIR-xE-Rwh"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="openSources" id="DTg-IG-uFO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TYZ-Xo-yhW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-843.75" y="32.74647887323944"/>
+        </scene>
         <!--Sources View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -22,12 +88,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="source" id="1mr-1m-LQt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="source" textLabel="TyB-0p-BsY" style="IBUITableViewCellStyleDefault" id="1mr-1m-LQt">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1mr-1m-LQt" id="6JA-BV-Vnw">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TyB-0p-BsY">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="2Jk-Bq-A9h" kind="show" identifier="openSource" id="84x-fG-g3j"/>
@@ -55,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+            <point key="canvasLocation" x="56" y="33"/>
         </scene>
         <!--Source View Controller-->
         <scene sceneID="KiN-Ky-ftQ">
@@ -88,12 +163,21 @@
                                 <rect key="frame" x="0.0" y="146.5" width="320" height="371.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="card" id="9dI-4n-fhC">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="card" textLabel="F7P-T6-SBW" style="IBUITableViewCellStyleDefault" id="9dI-4n-fhC">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9dI-4n-fhC" id="1Me-Z8-TGg">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="F7P-T6-SBW">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -102,8 +186,8 @@
                                     <outlet property="delegate" destination="2Jk-Bq-A9h" id="FkW-gH-cYY"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lH-Ut-vLV">
-                                <rect key="frame" x="16" y="122" width="288" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lH-Ut-vLV">
+                                <rect key="frame" x="16" y="122" width="288" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -136,10 +220,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m3A-sV-8gf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892.5" y="32.74647887323944"/>
+            <point key="canvasLocation" x="966" y="33"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="84x-fG-g3j"/>
+        <segue reference="bTB-SY-dQN"/>
     </inferredMetricsTieBreakers>
 </document>

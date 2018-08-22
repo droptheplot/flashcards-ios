@@ -15,7 +15,7 @@ class SourceRepository {
     self.baseURL = baseURL
   }
   
-  func all(success: @escaping (_ sources: [Source]) -> ()) {
+  func all(done: @escaping (_ sources: [Source]) -> ()) {
     let request = URLRequest(url: URL(string: self.baseURL + "/sources")!)
 
     let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -29,13 +29,13 @@ class SourceRepository {
       sources = try! decoder.decode([Source].self, from: data)
       dump(sources)
       
-      success(sources)
+      done(sources)
     }
 
     task.resume()
   }
   
-  func get(id: Int, success: @escaping (_ source: Source) -> ()) {
+  func get(id: Int, done: @escaping (_ source: Source) -> ()) {
     let request = URLRequest(url: URL(string: self.baseURL + "/sources/" + String(id))!)
     
     let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -49,7 +49,7 @@ class SourceRepository {
       source = try! decoder.decode(Source.self, from: data)
       dump(source)
       
-      success(source)
+      done(source)
     }
     
     task.resume()

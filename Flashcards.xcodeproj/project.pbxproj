@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E1040DA212C72CF00A2F6D3 /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1040D9212C72CF00A2F6D3 /* RepositoryError.swift */; };
 		5E80299E212BE65A00F3A2AC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E80299D212BE65A00F3A2AC /* BaseViewController.swift */; };
 		5E8029A5212BE98200F3A2AC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8029A4212BE98200F3A2AC /* Card.swift */; };
+		5E8029A7212C2ADE00F3A2AC /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8029A6212C2ADE00F3A2AC /* AuthViewController.swift */; };
+		5E8029A9212C307800F3A2AC /* TokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8029A8212C307800F3A2AC /* TokenRepository.swift */; };
 		5E887284211DE73200BDA39B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E887283211DE73200BDA39B /* AppDelegate.swift */; };
 		5E887286211DE73200BDA39B /* SourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E887285211DE73200BDA39B /* SourcesViewController.swift */; };
 		5E887289211DE73200BDA39B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E887287211DE73200BDA39B /* Main.storyboard */; };
@@ -17,11 +20,15 @@
 		5E900639212B3A050089B190 /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E900638212B3A050089B190 /* SourceViewController.swift */; };
 		5ECE45B1212A229000CB0EED /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECE45B0212A229000CB0EED /* Source.swift */; };
 		5ECE45B3212A2B4300CB0EED /* SourceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECE45B2212A2B4300CB0EED /* SourceRepository.swift */; };
+		5ED824A5212DC63F00C9595D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED824A4212DC63F00C9595D /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E1040D9212C72CF00A2F6D3 /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
 		5E80299D212BE65A00F3A2AC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5E8029A4212BE98200F3A2AC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		5E8029A6212C2ADE00F3A2AC /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		5E8029A8212C307800F3A2AC /* TokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepository.swift; sourceTree = "<group>"; };
 		5E887280211DE73200BDA39B /* Flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E887283211DE73200BDA39B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E887285211DE73200BDA39B /* SourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +39,7 @@
 		5E900638212B3A050089B190 /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
 		5ECE45B0212A229000CB0EED /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		5ECE45B2212A2B4300CB0EED /* SourceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceRepository.swift; sourceTree = "<group>"; };
+		5ED824A4212DC63F00C9595D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 				5E80299D212BE65A00F3A2AC /* BaseViewController.swift */,
 				5E887285211DE73200BDA39B /* SourcesViewController.swift */,
 				5E900638212B3A050089B190 /* SourceViewController.swift */,
+				5E8029A6212C2ADE00F3A2AC /* AuthViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -58,7 +67,9 @@
 		5E8029A0212BE79100F3A2AC /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				5E1040D9212C72CF00A2F6D3 /* RepositoryError.swift */,
 				5ECE45B2212A2B4300CB0EED /* SourceRepository.swift */,
+				5E8029A8212C307800F3A2AC /* TokenRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -66,6 +77,7 @@
 		5E8029A1212BE7AB00F3A2AC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				5ED824A4212DC63F00C9595D /* User.swift */,
 				5ECE45B0212A229000CB0EED /* Source.swift */,
 				5E8029A4212BE98200F3A2AC /* Card.swift */,
 			);
@@ -177,10 +189,14 @@
 				5E900639212B3A050089B190 /* SourceViewController.swift in Sources */,
 				5E887286211DE73200BDA39B /* SourcesViewController.swift in Sources */,
 				5E8029A5212BE98200F3A2AC /* Card.swift in Sources */,
+				5E8029A9212C307800F3A2AC /* TokenRepository.swift in Sources */,
 				5E887284211DE73200BDA39B /* AppDelegate.swift in Sources */,
+				5E8029A7212C2ADE00F3A2AC /* AuthViewController.swift in Sources */,
 				5ECE45B3212A2B4300CB0EED /* SourceRepository.swift in Sources */,
 				5ECE45B1212A229000CB0EED /* Source.swift in Sources */,
+				5E1040DA212C72CF00A2F6D3 /* RepositoryError.swift in Sources */,
 				5E80299E212BE65A00F3A2AC /* BaseViewController.swift in Sources */,
+				5ED824A5212DC63F00C9595D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
