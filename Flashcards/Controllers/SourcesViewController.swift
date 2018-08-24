@@ -24,9 +24,10 @@ class SourcesViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
+    navigationItem.hidesBackButton = true;
     sourcesTableView.addSubview(self.refreshControl)
-    
+
     sourceRepository.all() { sources in
       self.sources = sources
       DispatchQueue.main.async {

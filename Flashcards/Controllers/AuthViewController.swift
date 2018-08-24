@@ -14,11 +14,25 @@ class AuthViewController: BaseViewController {
   @IBOutlet weak var authButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    
+    self.navigationController?.setNavigationBarHidden(true, animated: true)
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    self.navigationController?.setNavigationBarHidden(false, animated: false)
+
+    super.viewWillDisappear(true)
+  }
+    
   override func viewDidAppear(_ animated: Bool) {
     authButton.layer.cornerRadius = 5
     errorLabel.isHidden = true
+
+    super.viewDidAppear(animated)
   }
-  
+
   @IBAction func AuthButton(_ sender: UIButton) {
     #if DEBUG
       self.token = ProcessInfo.processInfo.environment["DEBUG_TOKEN"]

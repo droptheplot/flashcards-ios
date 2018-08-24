@@ -17,10 +17,6 @@ class SourceViewController: BaseViewController {
   var id: Int?
   var source: Source?
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-  
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
@@ -29,6 +25,7 @@ class SourceViewController: BaseViewController {
       
       DispatchQueue.main.async {
         self.sourceTitleLabel.text = self.source!.title
+        self.navigationItem.title = self.source!.title
         self.sourceCardsCountLabel.text = String(format: "Cards: %d", self.source?.cards?.count ?? 0)
         self.cardsTableView.reloadData()
       }
