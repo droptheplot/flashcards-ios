@@ -8,14 +8,8 @@
 
 import Foundation
 
-class TokenRepository {
-  var baseURL: String
-
-  init(baseURL: String) {
-    self.baseURL = baseURL
-  }
-  
-  func create(email: String, password: String, done: @escaping (_ token: String?, _ err: Error?) -> ()) {
+extension Repository {
+  func createToken(email: String, password: String, done: @escaping (_ token: String?, _ err: Error?) -> ()) {
     var request = URLRequest(url: URL(string: self.baseURL + "/tokens")!)
     request.httpMethod = "POST"
     request.httpBody = String(format: "email=%@&password=%@", email, password).data(using: String.Encoding.utf8)

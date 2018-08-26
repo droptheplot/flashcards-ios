@@ -9,8 +9,6 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-  let sourceRepository = SourceRepository(baseURL: "http://localhost:8080/api/v1")
-  let tokenRepository = TokenRepository(baseURL: "http://localhost:8080/api/v1")
-  let cardRepository = CardRepository(baseURL: "http://localhost:8080/api/v1")
+  let repository = Repository(baseURL: "http://localhost:8080/api/v1")
   let baseColor = UIColor(red: 1.00, green: 0.18, blue: 0.57, alpha: 1.0)
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5E1040DA212C72CF00A2F6D3 /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1040D9212C72CF00A2F6D3 /* RepositoryError.swift */; };
 		5E3CF9CA2131FB8400558F29 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CF9C92131FB8400558F29 /* Store.swift */; };
+		5E3CF9CC21333C5900558F29 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CF9CB21333C5900558F29 /* Repository.swift */; };
 		5E80299E212BE65A00F3A2AC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E80299D212BE65A00F3A2AC /* BaseViewController.swift */; };
 		5E8029A5212BE98200F3A2AC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8029A4212BE98200F3A2AC /* Card.swift */; };
 		5E8029A7212C2ADE00F3A2AC /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8029A6212C2ADE00F3A2AC /* AuthViewController.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		5E1040D9212C72CF00A2F6D3 /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
 		5E3CF9C92131FB8400558F29 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		5E3CF9CB21333C5900558F29 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		5E80299D212BE65A00F3A2AC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5E8029A4212BE98200F3A2AC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		5E8029A6212C2ADE00F3A2AC /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -74,8 +76,9 @@
 		5E8029A0212BE79100F3A2AC /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				5EA8932C21319D3E00E55238 /* CardRepository.swift */,
+				5E3CF9CB21333C5900558F29 /* Repository.swift */,
 				5E1040D9212C72CF00A2F6D3 /* RepositoryError.swift */,
+				5EA8932C21319D3E00E55238 /* CardRepository.swift */,
 				5ECE45B2212A2B4300CB0EED /* SourceRepository.swift */,
 				5E8029A8212C307800F3A2AC /* TokenRepository.swift */,
 			);
@@ -197,6 +200,7 @@
 			files = (
 				5E900639212B3A050089B190 /* SourceViewController.swift in Sources */,
 				5E887286211DE73200BDA39B /* SourcesViewController.swift in Sources */,
+				5E3CF9CC21333C5900558F29 /* Repository.swift in Sources */,
 				5E8029A5212BE98200F3A2AC /* Card.swift in Sources */,
 				5E8784352130BF6000E4AF75 /* QuizViewController.swift in Sources */,
 				5E8029A9212C307800F3A2AC /* TokenRepository.swift in Sources */,

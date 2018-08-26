@@ -8,14 +8,8 @@
 
 import Foundation
 
-class SourceRepository {
-  var baseURL: String
-  
-  init(baseURL: String) {
-    self.baseURL = baseURL
-  }
-  
-  func all(done: @escaping (_ sources: [Source]) -> ()) {
+extension Repository {
+  func getSources(done: @escaping (_ sources: [Source]) -> ()) {
     let request = URLRequest(url: URL(string: self.baseURL + "/sources")!)
 
     let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -35,7 +29,7 @@ class SourceRepository {
     task.resume()
   }
   
-  func get(id: Int, done: @escaping (_ source: Source) -> ()) {
+  func getSource(id: Int, done: @escaping (_ source: Source) -> ()) {
     let request = URLRequest(url: URL(string: self.baseURL + "/sources/" + String(id))!)
     
     let task = URLSession.shared.dataTask(with: request) { data, response, error in

@@ -28,7 +28,7 @@ class SourcesViewController: BaseViewController {
     navigationItem.hidesBackButton = true;
     sourcesTableView.addSubview(self.refreshControl)
 
-    sourceRepository.all() { sources in
+    repository.getSources() { sources in
       self.sources = sources
       DispatchQueue.main.async {
         self.sourcesTableView.reloadData()
@@ -42,7 +42,7 @@ class SourcesViewController: BaseViewController {
   }
   
   @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-    sourceRepository.all() { sources in
+    repository.getSources() { sources in
       self.sources = sources
       DispatchQueue.main.async {
         self.sourcesTableView.reloadData()

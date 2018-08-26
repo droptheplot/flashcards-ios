@@ -23,7 +23,7 @@ class SourceViewController: BaseViewController {
     
     quizButton.layer.cornerRadius = 5
     
-    sourceRepository.get(id: id!) { source in
+    repository.getSource(id: id!) { source in
       self.source = source
 
       DispatchQueue.main.async {

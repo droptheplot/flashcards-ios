@@ -52,11 +52,11 @@ class QuizViewController: BaseViewController {
   
   @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
     if gesture.direction == UISwipeGestureRecognizerDirection.right {
-      cardRepository.addCardToUser(cardID: currentCard!.id, token: Store.instance.token!, correct: true) { _ in
+      repository.addCardToUser(cardID: currentCard!.id, token: Store.instance.token!, correct: true) { _ in
         self.currentCard = self.cards!.next()
       }
     } else if gesture.direction == UISwipeGestureRecognizerDirection.left {
-      cardRepository.addCardToUser(cardID: currentCard!.id, token: Store.instance.token!, correct: false) { _ in
+      repository.addCardToUser(cardID: currentCard!.id, token: Store.instance.token!, correct: false) { _ in
         self.currentCard = self.cards!.next()
       }
     }

@@ -8,13 +8,7 @@
 
 import Foundation
 
-class CardRepository {
-  var baseURL: String
-  
-  init(baseURL: String) {
-    self.baseURL = baseURL
-  }
-  
+extension Repository {
   func addCardToUser(cardID: Int, token: String, correct: Bool, done: @escaping (_ err: Error?) -> ()) {
     var request = URLRequest(url: URL(string: String(format: "%@/cards/%d/%@", self.baseURL, cardID, correct ? "correct" : "incorrect"))!)
     request.httpMethod = "POST"

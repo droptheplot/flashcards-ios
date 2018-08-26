@@ -34,7 +34,7 @@ class AuthViewController: BaseViewController {
   }
 
   @IBAction func AuthButton(_ sender: UIButton) {
-    tokenRepository.create(email: emailTextField.text!, password: passwordTextField.text!) { token, err in
+    repository.createToken(email: emailTextField.text!, password: passwordTextField.text!) { token, err in
       if err != nil {
         DispatchQueue.main.async {
           self.errorLabel.isHidden = false
