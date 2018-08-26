@@ -13,6 +13,7 @@ class SourceViewController: BaseViewController {
   @IBOutlet weak var backButton: UIButton!
   @IBOutlet weak var cardsTableView: UITableView!
   @IBOutlet weak var sourceCardsCountLabel: UILabel!
+  @IBOutlet weak var quizButton: UIButton!
   
   var id: Int?
   var source: Source?
@@ -20,16 +21,35 @@ class SourceViewController: BaseViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
+    quizButton.layer.cornerRadius = 5
+    
     sourceRepository.get(id: id!) { source in
       self.source = source
-      
+
       DispatchQueue.main.async {
         self.sourceTitleLabel.text = self.source!.title
         self.navigationItem.title = self.source!.title
-        self.sourceCardsCountLabel.text = String(format: "Cards: %d", self.source?.cards?.count ?? 0)
-        self.cardsTableView.reloadData()
+
+        if self.source!.cards == nil || self.source!.cards!.count == 0 {
+          self.sourceCardsCountLabel.text = "No cards found."
+          self.cardsTableView.isHidden = true
+          self.quizButton.isEnabled = false
+          self.quizButton.alpha = 0.5
+        } else {
+          self.sourceCardsCountLabel.text = String(format: "Cards: %d", self.source?.cards?.count ?? 0)
+          self.cardsTableView.reloadData()
+        }
       }
     }
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard segue.identifier != "openQuiz" else {
+      return
+    }
+    
+    let quizController = segue.destination as! QuizViewController
+    quizController.source = source!
   }
 }
 

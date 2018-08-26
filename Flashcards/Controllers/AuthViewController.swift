@@ -34,12 +34,6 @@ class AuthViewController: BaseViewController {
   }
 
   @IBAction func AuthButton(_ sender: UIButton) {
-    #if DEBUG
-      self.token = ProcessInfo.processInfo.environment["DEBUG_TOKEN"]
-      self.performSegue(withIdentifier: "openSources", sender: nil)
-      return
-    #endif
-    
     tokenRepository.create(email: emailTextField.text!, password: passwordTextField.text!) { token, err in
       if err != nil {
         DispatchQueue.main.async {
@@ -49,7 +43,7 @@ class AuthViewController: BaseViewController {
         return
       }
       
-      self.token = token!
+      Store.instance.token = token!
 
       DispatchQueue.main.async {
         self.errorLabel.isHidden = true
