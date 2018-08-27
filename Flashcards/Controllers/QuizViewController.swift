@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 class QuizViewController: BaseViewController {
   @IBOutlet weak var contentLabel: UILabel!
-
+  @IBOutlet weak var pronounceButton: UIButton!
+  
+  let synthesizer = AVSpeechSynthesizer()
   var source: Source?
   var cards: IndexingIterator<[Card]>?
   var currentCard: Card? {
@@ -19,6 +22,7 @@ class QuizViewController: BaseViewController {
         DispatchQueue.main.async {
           self.contentLabel.text = self.currentCard!.content
         }
+
         return
       }
       
@@ -48,6 +52,10 @@ class QuizViewController: BaseViewController {
     cards = source!.cards?.makeIterator()
 
     currentCard = cards!.next()
+    
+    let padding: CGFloat = 10.0
+    pronounceButton.contentEdgeInsets = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+    pronounceButton.layer.cornerRadius = 0.5
   }
   
   @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
@@ -60,5 +68,12 @@ class QuizViewController: BaseViewController {
         self.currentCard = self.cards!.next()
       }
     }
+  }
+  
+  @IBAction func pronounce(_ sender: Any) {
+    let utterance = AVSpeechUtterance(string: currentCard!.content)
+    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+    
+    synthesizer.speak(utterance)
   }
 }
