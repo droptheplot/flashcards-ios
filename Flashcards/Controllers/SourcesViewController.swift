@@ -22,10 +22,15 @@ class SourcesViewController: BaseViewController {
   
   @IBOutlet weak var sourcesTableView: UITableView!
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    sourcesTableView.separatorInset = UIEdgeInsets.zero
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    navigationItem.hidesBackButton = true;
     sourcesTableView.addSubview(self.refreshControl)
 
     repository.getSources() { sources in
@@ -60,7 +65,8 @@ extension SourcesViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "source")
     cell.textLabel?.text = sources[indexPath.row].title
-    
+    cell.textLabel?.font = UIFont(name: "ArialRoundedMTBold", size: CGFloat(17))
+
     return cell
   }
   

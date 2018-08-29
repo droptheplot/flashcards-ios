@@ -13,24 +13,13 @@ class AuthViewController: BaseViewController {
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var authButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
-
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(true)
-    
-    self.navigationController?.setNavigationBarHidden(true, animated: true)
-  }
+  @IBOutlet weak var authButtonTopConstraint: NSLayoutConstraint!
   
-  override func viewWillDisappear(_ animated: Bool) {
-    self.navigationController?.setNavigationBarHidden(false, animated: false)
-
-    super.viewWillDisappear(true)
-  }
-    
   override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
     authButton.layer.cornerRadius = 5
     errorLabel.isHidden = true
-
-    super.viewDidAppear(animated)
   }
 
   @IBAction func AuthButton(_ sender: UIButton) {

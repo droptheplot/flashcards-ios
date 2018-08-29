@@ -10,10 +10,10 @@ import UIKit
 
 class SourceViewController: BaseViewController {
   @IBOutlet weak var sourceTitleLabel: UILabel!
-  @IBOutlet weak var backButton: UIButton!
   @IBOutlet weak var cardsTableView: UITableView!
   @IBOutlet weak var sourceCardsCountLabel: UILabel!
   @IBOutlet weak var quizButton: UIButton!
+  @IBOutlet weak var backButton: UIButton!
   
   var id: Int?
   var source: Source?
@@ -21,20 +21,20 @@ class SourceViewController: BaseViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
+    cardsTableView.separatorInset = UIEdgeInsets.zero
     quizButton.layer.cornerRadius = 5
-    
+    backButton.layer.cornerRadius = 5
+
     repository.getSource(id: id!) { source in
       self.source = source
 
       DispatchQueue.main.async {
         self.sourceTitleLabel.text = self.source!.title
-        self.navigationItem.title = self.source!.title
 
         if self.source!.cards == nil || self.source!.cards!.count == 0 {
           self.sourceCardsCountLabel.text = "No cards found."
           self.cardsTableView.isHidden = true
-          self.quizButton.isEnabled = false
-          self.quizButton.alpha = 0.5
+          self.quizButton.isHidden = true
         } else {
           self.sourceCardsCountLabel.text = String(format: "Cards: %d", self.source?.cards?.count ?? 0)
           self.cardsTableView.reloadData()
@@ -44,12 +44,12 @@ class SourceViewController: BaseViewController {
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    guard segue.identifier != "openQuiz" else {
-      return
+    switch segue.identifier {
+    case "openQuiz":
+      let quizController = segue.destination as! QuizViewController
+      quizController.source = source!
+    default: break
     }
-    
-    let quizController = segue.destination as! QuizViewController
-    quizController.source = source!
   }
 }
 
@@ -61,6 +61,7 @@ extension SourceViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "card")
     cell.textLabel?.text = source!.cards![indexPath.row].content
+    cell.textLabel?.font = UIFont(name: "ArialRoundedMTBold", size: CGFloat(17))
     
     return cell
   }

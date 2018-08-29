@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class QuizViewController: BaseViewController {
+  @IBOutlet weak var cardView: UIView!
   @IBOutlet weak var contentLabel: UILabel!
   @IBOutlet weak var pronounceButton: UIButton!
   
@@ -26,7 +27,7 @@ class QuizViewController: BaseViewController {
         return
       }
       
-      DispatchQueue.main.async {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
         self.navigationController?.popViewController(animated: true)
       }
     }
@@ -41,21 +42,23 @@ class QuizViewController: BaseViewController {
     swipeLeft.direction = .left
     swipeRight.direction = .right
 
-    self.view.addGestureRecognizer(swipeLeft)
-    self.view.addGestureRecognizer(swipeRight)
+    cardView.addGestureRecognizer(swipeLeft)
+    cardView.addGestureRecognizer(swipeRight)
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    navigationItem.title = source!.title
     cards = source!.cards?.makeIterator()
 
     currentCard = cards!.next()
     
-    let padding: CGFloat = 10.0
+    let padding = CGFloat(10)
     pronounceButton.contentEdgeInsets = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-    pronounceButton.layer.cornerRadius = 0.5
+    pronounceButton.layer.cornerRadius = CGFloat(5)
+    
+    cardView.layer.cornerRadius = CGFloat(5)
+    cardView.layer.masksToBounds = true
   }
   
   @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
@@ -63,11 +66,22 @@ class QuizViewController: BaseViewController {
       repository.addCardToUser(cardID: currentCard!.id, token: Store.instance.token!, correct: true) { _ in
         self.currentCard = self.cards!.next()
       }
+      self.flash(self.successColor)
     } else if gesture.direction == UISwipeGestureRecognizerDirection.left {
       repository.addCardToUser(cardID: currentCard!.id, token: Store.instance.token!, correct: false) { _ in
         self.currentCard = self.cards!.next()
       }
+      self.flash(self.baseColor)
     }
+  }
+  
+  func flash(_ color: UIColor) {
+    UIView.animate(withDuration: 1, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+      self.cardView.layer.backgroundColor = color.cgColor
+    }, completion: nil)
+    UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
+      self.cardView.layer.backgroundColor = UIColor.white.cgColor
+    }, completion: nil)
   }
   
   @IBAction func pronounce(_ sender: Any) {
