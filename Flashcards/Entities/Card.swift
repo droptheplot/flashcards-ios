@@ -9,4 +9,8 @@
 struct Card: Codable {
   let id: Int
   let content: String
+  
+  let answersCount: Int
+  let correctAnswersCount: Int
+  let incorrectAnswersCount: Int 
 }

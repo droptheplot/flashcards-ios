@@ -25,7 +25,7 @@ class SourceViewController: BaseViewController {
     quizButton.layer.cornerRadius = 5
     backButton.layer.cornerRadius = 5
 
-    repository.getSource(id: id!) { source in
+    repository.getSource(id: id!, token: Store.instance.token!) { source in
       self.source = source
 
       DispatchQueue.main.async {
@@ -59,9 +59,15 @@ extension SourceViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "card")
-    cell.textLabel?.text = source!.cards![indexPath.row].content
+    let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "card")
+    let card = source!.cards![indexPath.row]
+    
+    cell.textLabel?.text = card.content
     cell.textLabel?.font = UIFont(name: "ArialRoundedMTBold", size: CGFloat(17))
+
+    cell.detailTextLabel?.text = String(format: "%.0f%% correct.", Double(card.correctAnswersCount) / Double(card.answersCount) * 100.0)
+    cell.detailTextLabel?.font = UIFont(name: "Helvetica", size: CGFloat(12))
+    cell.detailTextLabel?.textColor = UIColor.lightGray
     
     return cell
   }
