@@ -12,8 +12,12 @@ class Store {
   static let instance = Store()
   
   var token: String? {
-    didSet {
-      print("New token: \(String(describing: token))")
+    set {
+      print("New token: \(String(describing: newValue))")
+      UserDefaults.standard.set(newValue, forKey: "token")
+    }
+    get {
+      return UserDefaults.standard.string(forKey: "token")
     }
   }
 }

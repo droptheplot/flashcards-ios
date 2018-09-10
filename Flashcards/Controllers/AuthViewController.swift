@@ -20,6 +20,12 @@ class AuthViewController: BaseViewController {
     
     authButton.layer.cornerRadius = 5
     errorLabel.isHidden = true
+    
+    if (Store.instance.token != nil) {
+      DispatchQueue.main.async {
+        self.performSegue(withIdentifier: "openSources", sender: nil)
+      }
+    }
   }
 
   @IBAction func AuthButton(_ sender: UIButton) {
