@@ -25,8 +25,10 @@ class SourceViewController: BaseViewController {
     quizButton.layer.cornerRadius = 5
     backButton.layer.cornerRadius = 5
 
-    repository.getSource(id: id!, token: Store.instance.token!) { source in
-      self.source = source
+    repository.getSource(id: id!, token: Store.instance.token!) { result in
+      if case .success(let source) = result {
+        self.source = source
+      }
 
       DispatchQueue.main.async {
         self.sourceTitleLabel.text = self.source!.title

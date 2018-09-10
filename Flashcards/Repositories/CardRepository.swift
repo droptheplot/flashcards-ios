@@ -9,18 +9,18 @@
 import Foundation
 
 extension Repository {
-  func addCardToUser(cardID: Int, token: String, correct: Bool, done: @escaping (_ err: Error?) -> ()) {
+  func addCardToUser(cardID: Int, token: String, correct: Bool, done: @escaping (Result<Void, RepositoryError>) -> ()) {
     var request = URLRequest(url: URL(string: String(format: "%@/cards/%d/%@", self.baseURL, cardID, correct ? "correct" : "incorrect"))!)
     request.httpMethod = "POST"
     request.addValue(token, forHTTPHeaderField: "Authorization")
 
     let task = URLSession.shared.dataTask(with: request) { data, response, error in
       guard let _ = data, error == nil else {
-        done(RepositoryError.ServerError)
+        done(.failure(.ServerError))
         return
       }
       
-      done(nil)
+      done(.success(()))
     }
     
     task.resume()

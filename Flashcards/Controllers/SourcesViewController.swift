@@ -33,8 +33,11 @@ class SourcesViewController: BaseViewController {
 
     sourcesTableView.addSubview(self.refreshControl)
 
-    repository.getSources() { sources in
-      self.sources = sources
+    repository.getSources() { result in
+      if case .success(let sources) = result {
+        self.sources = sources
+      }
+
       DispatchQueue.main.async {
         self.sourcesTableView.reloadData()
       }
@@ -47,8 +50,11 @@ class SourcesViewController: BaseViewController {
   }
   
   @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-    repository.getSources() { sources in
-      self.sources = sources
+    repository.getSources() { result in
+      if case .success(let sources) = result {
+        self.sources = sources
+      }
+      
       DispatchQueue.main.async {
         self.sourcesTableView.reloadData()
         refreshControl.endRefreshing()

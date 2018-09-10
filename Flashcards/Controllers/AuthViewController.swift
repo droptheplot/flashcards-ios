@@ -23,20 +23,19 @@ class AuthViewController: BaseViewController {
   }
 
   @IBAction func AuthButton(_ sender: UIButton) {
-    repository.createToken(email: emailTextField.text!, password: passwordTextField.text!) { token, err in
-      if err != nil {
+    repository.createToken(email: emailTextField.text!, password: passwordTextField.text!) { result in
+      switch result {
+      case .failure(_):
         DispatchQueue.main.async {
           self.errorLabel.isHidden = false
         }
+      case .success(let token):
+        Store.instance.token = token
         
-        return
-      }
-      
-      Store.instance.token = token!
-
-      DispatchQueue.main.async {
-        self.errorLabel.isHidden = true
-        self.performSegue(withIdentifier: "openSources", sender: nil)
+        DispatchQueue.main.async {
+          self.errorLabel.isHidden = true
+          self.performSegue(withIdentifier: "openSources", sender: nil)
+        }
       }
     }
   }

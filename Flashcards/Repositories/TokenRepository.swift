@@ -9,14 +9,14 @@
 import Foundation
 
 extension Repository {
-  func createToken(email: String, password: String, done: @escaping (_ token: String?, _ err: Error?) -> ()) {
+  func createToken(email: String, password: String, done: @escaping (Result<String, RepositoryError>) -> ()) {
     var request = URLRequest(url: URL(string: self.baseURL + "/tokens")!)
     request.httpMethod = "POST"
     request.httpBody = String(format: "email=%@&password=%@", email, password).data(using: String.Encoding.utf8)
     
     let task = URLSession.shared.dataTask(with: request) { data, response, error in
       guard let data = data, error == nil else {
-        done(nil, RepositoryError.ServerError)
+        done(.failure(.ServerError))
         return
       }
       
@@ -24,9 +24,9 @@ extension Repository {
         let decoder = JSONDecoder()
         var result: [String:String] = try decoder.decode([String:String].self, from: data)
         
-        done(result["token"], nil)
+        done(.success(result["token"]!))
       } catch {
-        done(nil, RepositoryError.NotFound)
+        done(.failure(.NotFound))
       }
     }
     

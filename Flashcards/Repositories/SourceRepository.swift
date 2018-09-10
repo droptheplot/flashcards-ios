@@ -9,44 +9,47 @@
 import Foundation
 
 extension Repository {
-  func getSources(done: @escaping (_ sources: [Source]) -> ()) {
+  func getSources(done: @escaping (Result<[Source], RepositoryError>) -> ()) {
     let request = URLRequest(url: URL(string: self.baseURL + "/sources")!)
 
     let task = URLSession.shared.dataTask(with: request) { data, response, error in
       guard let data = data, error == nil else {
+        done(.failure(.ServerError))
         return
       }
 
-      let decoder = JSONDecoder()
-      var sources: [Source] = []
-
-      sources = try! decoder.decode([Source].self, from: data)
-      dump(sources)
-      
-      done(sources)
+      do {
+        let decoder = JSONDecoder()
+        let sources: [Source] = try decoder.decode([Source].self, from: data)
+        
+        done(.success(sources))
+      } catch {
+        done(.failure(.NotFound))
+      }
     }
 
     task.resume()
   }
   
-  func getSource(id: Int, token: String, done: @escaping (_ source: Source) -> ()) {
+  func getSource(id: Int, token: String, done: @escaping (Result<Source, RepositoryError>) -> ()) {
     var request = URLRequest(url: URL(string: self.baseURL + "/sources/" + String(id))!)
     request.addValue(token, forHTTPHeaderField: "Authorization")
 
     let task = URLSession.shared.dataTask(with: request) { data, response, error in
       guard let data = data, error == nil else {
+        done(.failure(.ServerError))
         return
       }
       
-      let decoder = JSONDecoder()
-      decoder.keyDecodingStrategy = .convertFromSnakeCase
-      
-      var source: Source
-      
-      source = try! decoder.decode(Source.self, from: data)
-      dump(source)
-      
-      done(source)
+      do {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        let source: Source = try decoder.decode(Source.self, from: data)
+        
+        done(.success(source))
+      } catch {
+        done(.failure(.NotFound))
+      }
     }
     
     task.resume()
