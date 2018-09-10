@@ -45,8 +45,14 @@ class SourcesViewController: BaseViewController {
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let sourceController = segue.destination as! SourceViewController
-    sourceController.id = selectedSourceID!
+    switch segue.identifier {
+    case "openSource":
+      let sourceController = segue.destination as! SourceViewController
+      sourceController.id = selectedSourceID!
+    case "openAuth":
+      Store.instance.token = nil
+    default: break
+    }
   }
   
   @objc func handleRefresh(_ refreshControl: UIRefreshControl) {

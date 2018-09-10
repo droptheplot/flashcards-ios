@@ -15,13 +15,17 @@ class AuthViewController: BaseViewController {
   @IBOutlet weak var errorLabel: UILabel!
   @IBOutlet weak var authButtonTopConstraint: NSLayoutConstraint!
   
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    
+  override func viewWillAppear(_ animated: Bool) {
     authButton.layer.cornerRadius = 5
     errorLabel.isHidden = true
     
-    if (Store.instance.token != nil) {
+    super.viewWillAppear(animated)
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+
+    if Store.instance.token != nil {
       DispatchQueue.main.async {
         self.performSegue(withIdentifier: "openSources", sender: nil)
       }

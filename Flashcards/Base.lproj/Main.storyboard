@@ -155,6 +155,19 @@
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTj-KG-W35">
+                                <rect key="frame" x="256" y="65" width="48" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Yuc-vx-NCr"/>
+                                    <constraint firstAttribute="width" constant="48" id="rPz-ji-Jce"/>
+                                </constraints>
+                                <state key="normal" image="exit"/>
+                                <connections>
+                                    <action selector="pronounce:" destination="bDf-ko-ZQr" eventType="touchUpInside" id="0ww-bA-CZb"/>
+                                    <segue destination="7T9-x9-zwa" kind="show" identifier="openAuth" id="os5-A1-nLt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -163,8 +176,10 @@
                             <constraint firstItem="X1G-ZY-Tex" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5VC-tm-Xy8"/>
                             <constraint firstItem="C1S-jA-2EM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ESW-Lk-5Zb"/>
                             <constraint firstItem="C1S-jA-2EM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="VDo-WC-K2Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GTj-KG-W35" secondAttribute="trailing" constant="16" id="j4j-BO-kRQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X1G-ZY-Tex" secondAttribute="trailing" constant="16" id="kqe-61-ejW"/>
                             <constraint firstItem="X1G-ZY-Tex" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="pqv-Lj-Jbw"/>
+                            <constraint firstItem="GTj-KG-W35" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="uRn-sI-ewc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -356,10 +371,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="exit" width="64" height="64"/>
         <image name="pronounce" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="84x-fG-g3j"/>
         <segue reference="GGv-Sl-l5b"/>
+        <segue reference="os5-A1-nLt"/>
     </inferredMetricsTieBreakers>
 </document>
