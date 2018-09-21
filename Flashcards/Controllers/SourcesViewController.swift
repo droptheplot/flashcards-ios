@@ -14,7 +14,7 @@ class SourcesViewController: BaseViewController {
   
   lazy var refreshControl: UIRefreshControl = {
     let refreshControl = UIRefreshControl()
-    refreshControl.addTarget(self, action: #selector(SourcesViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+    refreshControl.addTarget(self, action: #selector(SourcesViewController.handleRefresh(_:)), for: UIControl.Event.valueChanged)
     refreshControl.tintColor = UIColor.lightGray
     
     return refreshControl
@@ -75,7 +75,7 @@ extension SourcesViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "source")
+    let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "source")
     cell.textLabel?.text = sources[indexPath.row].title
     cell.textLabel?.font = UIFont(name: "ArialRoundedMTBold", size: CGFloat(17))
 

@@ -62,12 +62,12 @@ class QuizViewController: BaseViewController {
   }
   
   @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
-    if gesture.direction == UISwipeGestureRecognizerDirection.right {
+    if gesture.direction == UISwipeGestureRecognizer.Direction.right {
       repository.addCardToUser(cardID: currentCard!.id, token: Store.instance.token!, correct: true) { _ in
         self.currentCard = self.cards!.next()
       }
       self.flash(self.successColor)
-    } else if gesture.direction == UISwipeGestureRecognizerDirection.left {
+    } else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
       repository.addCardToUser(cardID: currentCard!.id, token: Store.instance.token!, correct: false) { _ in
         self.currentCard = self.cards!.next()
       }
@@ -76,10 +76,10 @@ class QuizViewController: BaseViewController {
   }
   
   func flash(_ color: UIColor) {
-    UIView.animate(withDuration: 1, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+    UIView.animate(withDuration: 1, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
       self.cardView.layer.backgroundColor = color.cgColor
     }, completion: nil)
-    UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
+    UIView.animate(withDuration: 0.5, delay: 0.0, options: UIView.AnimationOptions.curveLinear, animations: {
       self.cardView.layer.backgroundColor = UIColor.white.cgColor
     }, completion: nil)
   }

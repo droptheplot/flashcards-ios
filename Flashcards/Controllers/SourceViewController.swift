@@ -61,7 +61,7 @@ extension SourceViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "card")
+    let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "card")
     let card = source!.cards![indexPath.row]
     
     cell.textLabel?.text = card.content
