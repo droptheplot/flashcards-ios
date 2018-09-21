@@ -14,6 +14,27 @@ class AuthViewController: BaseViewController {
   @IBOutlet weak var authButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
   @IBOutlet weak var authButtonTopConstraint: NSLayoutConstraint!
+  @IBOutlet weak var stateButton: UIButton!
+  
+  enum State {
+    case signIn()
+    case signUp()
+  }
+  
+  var state: State = .signIn() {
+    didSet {
+      switch state {
+      case .signUp():
+        errorLabel.isHidden = true
+        authButton.setTitle("SIGN UP", for: [])
+        stateButton.setTitle("I already have an account", for: [])
+      case .signIn():
+        errorLabel.isHidden = true
+        authButton.setTitle("SIGN IN", for: [])
+        stateButton.setTitle("I don't have an account", for: [])
+      }
+    }
+  }
   
   override func viewWillAppear(_ animated: Bool) {
     authButton.layer.cornerRadius = 5
@@ -32,7 +53,25 @@ class AuthViewController: BaseViewController {
     }
   }
 
-  @IBAction func AuthButton(_ sender: UIButton) {
+  @IBAction func stateButton(_ sender: UIButton) {
+    switch state {
+    case .signIn():
+      state = .signUp()
+    case .signUp():
+      state = .signIn()
+    }
+  }
+  
+  @IBAction func authButton(_ sender: UIButton) {
+    switch state {
+    case .signIn():
+      signIn()
+    case .signUp():
+      signUp()
+    }
+  }
+  
+  private func signIn() {
     repository.createToken(email: emailTextField.text!, password: passwordTextField.text!) { result in
       switch result {
       case .failure(_):
@@ -45,6 +84,33 @@ class AuthViewController: BaseViewController {
         DispatchQueue.main.async {
           self.errorLabel.isHidden = true
           self.performSegue(withIdentifier: "openSources", sender: nil)
+        }
+      }
+    }
+  }
+  
+  private func signUp() {
+    let email = emailTextField.text!
+    let password = passwordTextField.text!
+    
+    repository.createUser(email: email, password: password) { result in
+      switch result {
+      case .failure(_):
+        DispatchQueue.main.async {
+          self.errorLabel.isHidden = false
+        }
+      case .success():
+        self.repository.createToken(email: email, password: password) { result in
+          switch result {
+          case .success(let token):
+            Store.instance.token = token
+            
+            DispatchQueue.main.async {
+              self.errorLabel.isHidden = true
+              self.performSegue(withIdentifier: "openSources", sender: nil)
+            }
+          case .failure(_): break
+          }
         }
       }
     }

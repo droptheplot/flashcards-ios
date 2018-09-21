@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VK1-xG-XE6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VK1-xG-XE6">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,12 +59,23 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="AuthButton:" destination="7T9-x9-zwa" eventType="touchUpInside" id="fwF-vI-DeJ"/>
+                                    <action selector="authButton:" destination="7T9-x9-zwa" eventType="touchUpInside" id="yd3-us-E5h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCS-j4-xRV">
+                                <rect key="frame" x="80.5" y="328" width="159" height="30"/>
+                                <state key="normal" title="I don't have an account">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="stateButton:" destination="7T9-x9-zwa" eventType="touchUpInside" id="bLk-Vb-hs1"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="qCS-j4-xRV" firstAttribute="centerX" secondItem="j7d-7g-Sda" secondAttribute="centerX" id="ChY-7D-jcS"/>
+                            <constraint firstItem="qCS-j4-xRV" firstAttribute="top" secondItem="oMx-oZ-uZg" secondAttribute="bottom" constant="20" id="HsN-Ge-Fnw"/>
                             <constraint firstItem="oMx-oZ-uZg" firstAttribute="centerX" secondItem="j7d-7g-Sda" secondAttribute="centerX" id="KpO-au-Qfb"/>
                             <constraint firstItem="oMx-oZ-uZg" firstAttribute="top" secondItem="vqJ-cD-1C4" secondAttribute="bottom" constant="20" id="O7b-NN-WwD"/>
                             <constraint firstItem="JW2-uj-aof" firstAttribute="centerX" secondItem="j7d-7g-Sda" secondAttribute="centerX" id="Tzg-0a-lh7"/>
@@ -84,6 +94,7 @@
                         <outlet property="emailTextField" destination="7xo-27-zLa" id="Oy7-Wm-vDD"/>
                         <outlet property="errorLabel" destination="JW2-uj-aof" id="IDS-jN-v6n"/>
                         <outlet property="passwordTextField" destination="vqJ-cD-1C4" id="uIR-xE-Rwh"/>
+                        <outlet property="stateButton" destination="qCS-j4-xRV" id="eum-Px-gg1"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="openSources" id="DTg-IG-uFO"/>
                     </connections>
                 </viewController>
@@ -123,7 +134,7 @@
                                 <rect key="frame" x="0.0" y="125" width="320" height="443"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="source" textLabel="fj7-7q-e6P" style="IBUITableViewCellStyleDefault" id="1mr-1m-LQt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="source" textLabel="fj7-7q-e6P" style="IBUITableViewCellStyleDefault" id="1mr-1m-LQt">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1mr-1m-LQt" id="6JA-BV-Vnw">
@@ -208,7 +219,7 @@
                                 <rect key="frame" x="0.0" y="222.5" width="320" height="345.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="card" textLabel="vdd-GZ-xL3" detailTextLabel="70R-Yh-Igd" style="IBUITableViewCellStyleSubtitle" id="9dI-4n-fhC">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="card" textLabel="vdd-GZ-xL3" detailTextLabel="70R-Yh-Igd" style="IBUITableViewCellStyleSubtitle" id="9dI-4n-fhC">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9dI-4n-fhC" id="1Me-Z8-TGg">
@@ -375,8 +386,7 @@
         <image name="pronounce" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="84x-fG-g3j"/>
-        <segue reference="GGv-Sl-l5b"/>
+        <segue reference="DTg-IG-uFO"/>
         <segue reference="os5-A1-nLt"/>
     </inferredMetricsTieBreakers>
 </document>

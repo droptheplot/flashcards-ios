@@ -11,4 +11,5 @@ import Foundation
 enum RepositoryError: Error {
   case ServerError
   case NotFound
+  case UnprocessableEntity
 }

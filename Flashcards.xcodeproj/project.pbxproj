@@ -11,6 +11,7 @@
 		5E39E8712146B40E004F5566 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39E8702146B40E004F5566 /* Result.swift */; };
 		5E3CF9CA2131FB8400558F29 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CF9C92131FB8400558F29 /* Store.swift */; };
 		5E3CF9CC21333C5900558F29 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CF9CB21333C5900558F29 /* Repository.swift */; };
+		5E76F5372153176000257C02 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E76F5362153176000257C02 /* UserRepository.swift */; };
 		5E80299E212BE65A00F3A2AC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E80299D212BE65A00F3A2AC /* BaseViewController.swift */; };
 		5E8029A5212BE98200F3A2AC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8029A4212BE98200F3A2AC /* Card.swift */; };
 		5E8029A7212C2ADE00F3A2AC /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8029A6212C2ADE00F3A2AC /* AuthViewController.swift */; };
@@ -33,6 +34,7 @@
 		5E39E8702146B40E004F5566 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Flashcards/Result.swift; sourceTree = SOURCE_ROOT; };
 		5E3CF9C92131FB8400558F29 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		5E3CF9CB21333C5900558F29 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		5E76F5362153176000257C02 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		5E80299D212BE65A00F3A2AC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5E8029A4212BE98200F3A2AC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		5E8029A6212C2ADE00F3A2AC /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				5EA8932C21319D3E00E55238 /* CardRepository.swift */,
 				5ECE45B2212A2B4300CB0EED /* SourceRepository.swift */,
 				5E8029A8212C307800F3A2AC /* TokenRepository.swift */,
+				5E76F5362153176000257C02 /* UserRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				5E8029A5212BE98200F3A2AC /* Card.swift in Sources */,
 				5E8784352130BF6000E4AF75 /* QuizViewController.swift in Sources */,
 				5E8029A9212C307800F3A2AC /* TokenRepository.swift in Sources */,
+				5E76F5372153176000257C02 /* UserRepository.swift in Sources */,
 				5E39E8712146B40E004F5566 /* Result.swift in Sources */,
 				5E887284211DE73200BDA39B /* AppDelegate.swift in Sources */,
 				5E8029A7212C2ADE00F3A2AC /* AuthViewController.swift in Sources */,
