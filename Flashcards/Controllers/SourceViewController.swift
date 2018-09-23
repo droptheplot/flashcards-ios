@@ -38,7 +38,7 @@ class SourceViewController: BaseViewController {
           self.cardsTableView.isHidden = true
           self.quizButton.isHidden = true
         } else {
-          self.sourceCardsCountLabel.text = String(format: "Cards: %d", self.source?.cards?.count ?? 0)
+          self.sourceCardsCountLabel.text = String(format: "Cards: %d", self.source.cardsCount())
           self.cardsTableView.reloadData()
         }
       }
@@ -67,7 +67,7 @@ extension SourceViewController: UITableViewDelegate, UITableViewDataSource {
     cell.textLabel?.text = card.content
     cell.textLabel?.font = UIFont(name: "ArialRoundedMTBold", size: CGFloat(17))
 
-    cell.detailTextLabel?.text = String(format: "%.0f%% correct.", Double(card.correctAnswersCount) / Double(card.answersCount) * 100.0)
+    cell.detailTextLabel?.text = String(format: "%.0f%% correct.", card.correctPercentage())
     cell.detailTextLabel?.font = UIFont(name: "Helvetica", size: CGFloat(12))
     cell.detailTextLabel?.textColor = UIColor.lightGray
     

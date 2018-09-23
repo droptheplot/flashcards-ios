@@ -9,9 +9,15 @@
 import Foundation
 
 class Repository {
-  var baseURL: String
+  var baseURL: URL
   
-  init(baseURL: String) {
+  enum Error: Swift.Error {
+    case ServerError
+    case NotFound
+    case UnprocessableEntity
+  }
+  
+  init(baseURL: URL) {
     self.baseURL = baseURL
   }
 }

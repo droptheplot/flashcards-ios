@@ -9,8 +9,9 @@
 import Foundation
 
 extension Repository {
-  func addCardToUser(cardID: Int, token: String, correct: Bool, done: @escaping (Result<Void, RepositoryError>) -> ()) {
-    var request = URLRequest(url: URL(string: String(format: "%@/cards/%d/%@", self.baseURL, cardID, correct ? "correct" : "incorrect"))!)
+  func addCardToUser(cardID: Int, token: String, correct: Bool, done: @escaping (Result<Void, Repository.Error>) -> ()) {
+    let path = String(format: "cards/%d/%@", cardID, correct ? "correct" : "incorrect")
+    var request = URLRequest(url: self.baseURL.appendingPathComponent(path))
     request.httpMethod = "POST"
     request.addValue(token, forHTTPHeaderField: "Authorization")
 

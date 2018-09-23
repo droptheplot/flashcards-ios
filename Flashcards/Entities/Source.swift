@@ -10,4 +10,14 @@ struct Source: Codable {
   let id: Int
   let title: String
   let cards: [Card]?
+  
+  func cardsCount() -> Int {
+    return cards?.count ?? 0
+  }
+}
+
+extension Optional where Wrapped == Source {
+  func cardsCount() -> Int {
+    return self?.cardsCount() ?? 0
+  }
 }

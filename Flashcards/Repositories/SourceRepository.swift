@@ -9,8 +9,8 @@
 import Foundation
 
 extension Repository {
-  func getSources(done: @escaping (Result<[Source], RepositoryError>) -> ()) {
-    let request = URLRequest(url: URL(string: self.baseURL + "/sources")!)
+  func getSources(done: @escaping (Result<[Source], Repository.Error>) -> ()) {
+    let request = URLRequest(url: self.baseURL.appendingPathComponent("sources"))
 
     let task = URLSession.shared.dataTask(with: request) { data, response, error in
       guard let data = data, error == nil else {
@@ -31,8 +31,9 @@ extension Repository {
     task.resume()
   }
   
-  func getSource(id: Int, token: String, done: @escaping (Result<Source, RepositoryError>) -> ()) {
-    var request = URLRequest(url: URL(string: self.baseURL + "/sources/" + String(id))!)
+  func getSource(id: Int, token: String, done: @escaping (Result<Source, Repository.Error>) -> ()) {
+    let path = String(format: "sources/%d", id)
+    var request = URLRequest(url: self.baseURL.appendingPathComponent(path))
     request.addValue(token, forHTTPHeaderField: "Authorization")
 
     let task = URLSession.shared.dataTask(with: request) { data, response, error in

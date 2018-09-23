@@ -55,9 +55,9 @@ class QuizViewController: BaseViewController {
     
     let padding = CGFloat(10)
     pronounceButton.contentEdgeInsets = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-    pronounceButton.layer.cornerRadius = CGFloat(5)
+    pronounceButton.layer.cornerRadius = 5
     
-    cardView.layer.cornerRadius = CGFloat(5)
+    cardView.layer.cornerRadius = 5
     cardView.layer.masksToBounds = true
   }
   

@@ -9,8 +9,8 @@
 import Foundation
 
 extension Repository {
-  func createUser(email: String, password: String, done: @escaping (Result<Void, RepositoryError>) -> ()) {
-    var request = URLRequest(url: URL(string: self.baseURL + "/users")!)
+  func createUser(email: String, password: String, done: @escaping (Result<Void, Repository.Error>) -> ()) {
+    var request = URLRequest(url: self.baseURL.appendingPathComponent("users"))
     request.httpMethod = "POST"
     request.httpBody = String(format: "email=%@&password=%@", email, password).data(using: String.Encoding.utf8)
     

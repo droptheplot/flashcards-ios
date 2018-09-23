@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E1040DA212C72CF00A2F6D3 /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1040D9212C72CF00A2F6D3 /* RepositoryError.swift */; };
 		5E39E8712146B40E004F5566 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39E8702146B40E004F5566 /* Result.swift */; };
 		5E3CF9CA2131FB8400558F29 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CF9C92131FB8400558F29 /* Store.swift */; };
 		5E3CF9CC21333C5900558F29 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CF9CB21333C5900558F29 /* Repository.swift */; };
 		5E76F5372153176000257C02 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E76F5362153176000257C02 /* UserRepository.swift */; };
+		5E76F53F2155C38000257C02 /* FlashcardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E76F53E2155C38000257C02 /* FlashcardsTests.swift */; };
 		5E80299E212BE65A00F3A2AC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E80299D212BE65A00F3A2AC /* BaseViewController.swift */; };
 		5E8029A5212BE98200F3A2AC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8029A4212BE98200F3A2AC /* Card.swift */; };
 		5E8029A7212C2ADE00F3A2AC /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8029A6212C2ADE00F3A2AC /* AuthViewController.swift */; };
@@ -29,12 +29,24 @@
 		5ED824A5212DC63F00C9595D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED824A4212DC63F00C9595D /* User.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5E76F5412155C38000257C02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E887278211DE73200BDA39B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E88727F211DE73200BDA39B;
+			remoteInfo = Flashcards;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		5E1040D9212C72CF00A2F6D3 /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
 		5E39E8702146B40E004F5566 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Flashcards/Result.swift; sourceTree = SOURCE_ROOT; };
 		5E3CF9C92131FB8400558F29 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		5E3CF9CB21333C5900558F29 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		5E76F5362153176000257C02 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		5E76F53C2155C38000257C02 /* FlashcardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E76F53E2155C38000257C02 /* FlashcardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsTests.swift; sourceTree = "<group>"; };
+		5E76F5402155C38000257C02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E80299D212BE65A00F3A2AC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5E8029A4212BE98200F3A2AC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		5E8029A6212C2ADE00F3A2AC /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +67,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5E76F5392155C38000257C02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E88727D211DE73200BDA39B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E76F53D2155C38000257C02 /* FlashcardsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E76F53E2155C38000257C02 /* FlashcardsTests.swift */,
+				5E76F5402155C38000257C02 /* Info.plist */,
+			);
+			path = FlashcardsTests;
+			sourceTree = "<group>";
+		};
 		5E80299F212BE77A00F3A2AC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				5E3CF9CB21333C5900558F29 /* Repository.swift */,
-				5E1040D9212C72CF00A2F6D3 /* RepositoryError.swift */,
 				5EA8932C21319D3E00E55238 /* CardRepository.swift */,
 				5ECE45B2212A2B4300CB0EED /* SourceRepository.swift */,
 				5E8029A8212C307800F3A2AC /* TokenRepository.swift */,
@@ -104,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				5E887282211DE73200BDA39B /* Flashcards */,
+				5E76F53D2155C38000257C02 /* FlashcardsTests */,
 				5E887281211DE73200BDA39B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				5E887280211DE73200BDA39B /* Flashcards.app */,
+				5E76F53C2155C38000257C02 /* FlashcardsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +165,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5E76F53B2155C38000257C02 /* FlashcardsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E76F5452155C38000257C02 /* Build configuration list for PBXNativeTarget "FlashcardsTests" */;
+			buildPhases = (
+				5E76F5382155C38000257C02 /* Sources */,
+				5E76F5392155C38000257C02 /* Frameworks */,
+				5E76F53A2155C38000257C02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E76F5422155C38000257C02 /* PBXTargetDependency */,
+			);
+			name = FlashcardsTests;
+			productName = FlashcardsTests;
+			productReference = 5E76F53C2155C38000257C02 /* FlashcardsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5E88727F211DE73200BDA39B /* Flashcards */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E887292211DE73300BDA39B /* Build configuration list for PBXNativeTarget "Flashcards" */;
@@ -159,10 +206,14 @@
 		5E887278211DE73200BDA39B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Sergei Novikov";
 				TargetAttributes = {
+					5E76F53B2155C38000257C02 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 5E88727F211DE73200BDA39B;
+					};
 					5E88727F211DE73200BDA39B = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
@@ -183,11 +234,19 @@
 			projectRoot = "";
 			targets = (
 				5E88727F211DE73200BDA39B /* Flashcards */,
+				5E76F53B2155C38000257C02 /* FlashcardsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5E76F53A2155C38000257C02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E88727E211DE73200BDA39B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,6 +260,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5E76F5382155C38000257C02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E76F53F2155C38000257C02 /* FlashcardsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E88727C211DE73200BDA39B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,7 +285,6 @@
 				5E3CF9CA2131FB8400558F29 /* Store.swift in Sources */,
 				5ECE45B3212A2B4300CB0EED /* SourceRepository.swift in Sources */,
 				5ECE45B1212A229000CB0EED /* Source.swift in Sources */,
-				5E1040DA212C72CF00A2F6D3 /* RepositoryError.swift in Sources */,
 				5E80299E212BE65A00F3A2AC /* BaseViewController.swift in Sources */,
 				5ED824A5212DC63F00C9595D /* User.swift in Sources */,
 				5EA8932D21319D3E00E55238 /* CardRepository.swift in Sources */,
@@ -226,6 +292,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E76F5422155C38000257C02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E88727F211DE73200BDA39B /* Flashcards */;
+			targetProxy = 5E76F5412155C38000257C02 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5E887287211DE73200BDA39B /* Main.storyboard */ = {
@@ -247,6 +321,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5E76F5432155C38000257C02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8NA2975446;
+				INFOPLIST_FILE = FlashcardsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.droptheplot.FlashcardsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flashcards.app/Flashcards";
+			};
+			name = Debug;
+		};
+		5E76F5442155C38000257C02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8NA2975446;
+				INFOPLIST_FILE = FlashcardsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.droptheplot.FlashcardsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flashcards.app/Flashcards";
+			};
+			name = Release;
+		};
 		5E887290211DE73300BDA39B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -404,6 +523,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5E76F5452155C38000257C02 /* Build configuration list for PBXNativeTarget "FlashcardsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E76F5432155C38000257C02 /* Debug */,
+				5E76F5442155C38000257C02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5E88727B211DE73200BDA39B /* Build configuration list for PBXProject "Flashcards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
