@@ -93,7 +93,7 @@
 			path = FlashcardsTests;
 			sourceTree = "<group>";
 		};
-		5E80299F212BE77A00F3A2AC /* Controllers */ = {
+		5E80299F212BE77A00F3A2AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				5E80299D212BE65A00F3A2AC /* BaseViewController.swift */,
@@ -102,7 +102,7 @@
 				5E8029A6212C2ADE00F3A2AC /* AuthViewController.swift */,
 				5E8784342130BF6000E4AF75 /* QuizViewController.swift */,
 			);
-			path = Controllers;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5E8029A0212BE79100F3A2AC /* Repositories */ = {
@@ -148,7 +148,7 @@
 		5E887282211DE73200BDA39B /* Flashcards */ = {
 			isa = PBXGroup;
 			children = (
-				5E80299F212BE77A00F3A2AC /* Controllers */,
+				5E80299F212BE77A00F3A2AC /* Views */,
 				5E8029A0212BE79100F3A2AC /* Repositories */,
 				5E8029A1212BE7AB00F3A2AC /* Entities */,
 				5E887283211DE73200BDA39B /* AppDelegate.swift */,
