@@ -15,7 +15,7 @@ extension Repository {
     request.httpMethod = "POST"
     request.addValue(token, forHTTPHeaderField: "Authorization")
 
-    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+    let task = urlSession.dataTask(with: request) { data, response, error in
       guard let _ = data, error == nil else {
         done(.failure(.ServerError))
         return

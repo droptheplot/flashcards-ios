@@ -10,6 +10,8 @@
 		5E39E8712146B40E004F5566 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39E8702146B40E004F5566 /* Result.swift */; };
 		5E3CF9CA2131FB8400558F29 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CF9C92131FB8400558F29 /* Store.swift */; };
 		5E3CF9CC21333C5900558F29 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CF9CB21333C5900558F29 /* Repository.swift */; };
+		5E4A9406215D20FE00D0B193 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A9405215D20FE00D0B193 /* URLSessionProtocol.swift */; };
+		5E4A9408215D586900D0B193 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A9407215D586900D0B193 /* URLSessionDataTaskProtocol.swift */; };
 		5E76F5372153176000257C02 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E76F5362153176000257C02 /* UserRepository.swift */; };
 		5E76F53F2155C38000257C02 /* FlashcardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E76F53E2155C38000257C02 /* FlashcardsTests.swift */; };
 		5E80299E212BE65A00F3A2AC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E80299D212BE65A00F3A2AC /* BaseViewController.swift */; };
@@ -43,6 +45,8 @@
 		5E39E8702146B40E004F5566 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Flashcards/Result.swift; sourceTree = SOURCE_ROOT; };
 		5E3CF9C92131FB8400558F29 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		5E3CF9CB21333C5900558F29 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		5E4A9405215D20FE00D0B193 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		5E4A9407215D586900D0B193 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
 		5E76F5362153176000257C02 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		5E76F53C2155C38000257C02 /* FlashcardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E76F53E2155C38000257C02 /* FlashcardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsTests.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 				5ECE45B2212A2B4300CB0EED /* SourceRepository.swift */,
 				5E8029A8212C307800F3A2AC /* TokenRepository.swift */,
 				5E76F5362153176000257C02 /* UserRepository.swift */,
+				5E4A9405215D20FE00D0B193 /* URLSessionProtocol.swift */,
+				5E4A9407215D586900D0B193 /* URLSessionDataTaskProtocol.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -274,8 +280,10 @@
 			files = (
 				5E900639212B3A050089B190 /* SourceViewController.swift in Sources */,
 				5E887286211DE73200BDA39B /* SourcesViewController.swift in Sources */,
+				5E4A9408215D586900D0B193 /* URLSessionDataTaskProtocol.swift in Sources */,
 				5E3CF9CC21333C5900558F29 /* Repository.swift in Sources */,
 				5E8029A5212BE98200F3A2AC /* Card.swift in Sources */,
+				5E4A9406215D20FE00D0B193 /* URLSessionProtocol.swift in Sources */,
 				5E8784352130BF6000E4AF75 /* QuizViewController.swift in Sources */,
 				5E8029A9212C307800F3A2AC /* TokenRepository.swift in Sources */,
 				5E76F5372153176000257C02 /* UserRepository.swift in Sources */,

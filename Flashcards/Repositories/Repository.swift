@@ -10,6 +10,7 @@ import Foundation
 
 class Repository {
   var baseURL: URL
+  var urlSession: URLSessionProtocol
   
   enum Error: Swift.Error {
     case ServerError
@@ -17,7 +18,8 @@ class Repository {
     case UnprocessableEntity
   }
   
-  init(baseURL: URL) {
+  init(baseURL: URL, urlSession: URLSessionProtocol) {
     self.baseURL = baseURL
+    self.urlSession = urlSession
   }
 }
