@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol URLSessionDataTaskProtocol {
+protocol URLSessionDataTaskProtocol: AutoMockable {
   func resume()
 }
 

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E0CE2922167CC8700BF4D39 /* AutoMockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0CE2912167CC8700BF4D39 /* AutoMockable.swift */; };
 		5E39E8712146B40E004F5566 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39E8702146B40E004F5566 /* Result.swift */; };
 		5E3CF9CA2131FB8400558F29 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CF9C92131FB8400558F29 /* Store.swift */; };
 		5E3CF9CC21333C5900558F29 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CF9CB21333C5900558F29 /* Repository.swift */; };
 		5E4A9406215D20FE00D0B193 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A9405215D20FE00D0B193 /* URLSessionProtocol.swift */; };
 		5E4A9408215D586900D0B193 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A9407215D586900D0B193 /* URLSessionDataTaskProtocol.swift */; };
 		5E76F5372153176000257C02 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E76F5362153176000257C02 /* UserRepository.swift */; };
-		5E76F53F2155C38000257C02 /* FlashcardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E76F53E2155C38000257C02 /* FlashcardsTests.swift */; };
 		5E80299E212BE65A00F3A2AC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E80299D212BE65A00F3A2AC /* BaseViewController.swift */; };
 		5E8029A5212BE98200F3A2AC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8029A4212BE98200F3A2AC /* Card.swift */; };
 		5E8029A7212C2ADE00F3A2AC /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8029A6212C2ADE00F3A2AC /* AuthViewController.swift */; };
@@ -25,6 +25,9 @@
 		5E88728B211DE73300BDA39B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E88728A211DE73300BDA39B /* Assets.xcassets */; };
 		5E88728E211DE73300BDA39B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E88728C211DE73300BDA39B /* LaunchScreen.storyboard */; };
 		5E900639212B3A050089B190 /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E900638212B3A050089B190 /* SourceViewController.swift */; };
+		5EA0E2B42167D15300537999 /* AutoMockable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 5EA0E2B32167D15300537999 /* AutoMockable.stencil */; };
+		5EA0E2B62167D1AC00537999 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA0E2B52167D1AC00537999 /* AutoMockable.generated.swift */; };
+		5EA0E2BC2167D5B600537999 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA0E2B92167D57100537999 /* RepositoryTests.swift */; };
 		5EA8932D21319D3E00E55238 /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8932C21319D3E00E55238 /* CardRepository.swift */; };
 		5ECE45B1212A229000CB0EED /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECE45B0212A229000CB0EED /* Source.swift */; };
 		5ECE45B3212A2B4300CB0EED /* SourceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECE45B2212A2B4300CB0EED /* SourceRepository.swift */; };
@@ -42,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E0CE2912167CC8700BF4D39 /* AutoMockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutoMockable.swift; path = Flashcards/AutoMockable.swift; sourceTree = SOURCE_ROOT; };
 		5E39E8702146B40E004F5566 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Flashcards/Result.swift; sourceTree = SOURCE_ROOT; };
 		5E3CF9C92131FB8400558F29 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		5E3CF9CB21333C5900558F29 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -49,7 +53,6 @@
 		5E4A9407215D586900D0B193 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
 		5E76F5362153176000257C02 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		5E76F53C2155C38000257C02 /* FlashcardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E76F53E2155C38000257C02 /* FlashcardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsTests.swift; sourceTree = "<group>"; };
 		5E76F5402155C38000257C02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E80299D212BE65A00F3A2AC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5E8029A4212BE98200F3A2AC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -64,6 +67,9 @@
 		5E88728D211DE73300BDA39B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E88728F211DE73300BDA39B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E900638212B3A050089B190 /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
+		5EA0E2B32167D15300537999 /* AutoMockable.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoMockable.stencil; sourceTree = "<group>"; };
+		5EA0E2B52167D1AC00537999 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		5EA0E2B92167D57100537999 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoryTests.swift; path = FlashcardsTests/Repositories/RepositoryTests.swift; sourceTree = SOURCE_ROOT; };
 		5EA8932C21319D3E00E55238 /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardRepository.swift; path = Flashcards/Repositories/CardRepository.swift; sourceTree = SOURCE_ROOT; };
 		5ECE45B0212A229000CB0EED /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		5ECE45B2212A2B4300CB0EED /* SourceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceRepository.swift; sourceTree = "<group>"; };
@@ -91,7 +97,7 @@
 		5E76F53D2155C38000257C02 /* FlashcardsTests */ = {
 			isa = PBXGroup;
 			children = (
-				5E76F53E2155C38000257C02 /* FlashcardsTests.swift */,
+				5EA0E2BD2167D5BC00537999 /* Repositories */,
 				5E76F5402155C38000257C02 /* Info.plist */,
 			);
 			path = FlashcardsTests;
@@ -157,7 +163,10 @@
 				5E80299F212BE77A00F3A2AC /* Views */,
 				5E8029A0212BE79100F3A2AC /* Repositories */,
 				5E8029A1212BE7AB00F3A2AC /* Entities */,
+				5EA0E2B22167D12200537999 /* Templates */,
 				5E887283211DE73200BDA39B /* AppDelegate.swift */,
+				5E0CE2912167CC8700BF4D39 /* AutoMockable.swift */,
+				5EA0E2B52167D1AC00537999 /* AutoMockable.generated.swift */,
 				5E3CF9C92131FB8400558F29 /* Store.swift */,
 				5E39E8702146B40E004F5566 /* Result.swift */,
 				5E887287211DE73200BDA39B /* Main.storyboard */,
@@ -166,6 +175,22 @@
 				5E88728F211DE73300BDA39B /* Info.plist */,
 			);
 			path = Flashcards;
+			sourceTree = "<group>";
+		};
+		5EA0E2B22167D12200537999 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				5EA0E2B32167D15300537999 /* AutoMockable.stencil */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		5EA0E2BD2167D5BC00537999 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5EA0E2B92167D57100537999 /* RepositoryTests.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +221,7 @@
 				5E88727C211DE73200BDA39B /* Sources */,
 				5E88727D211DE73200BDA39B /* Frameworks */,
 				5E88727E211DE73200BDA39B /* Resources */,
+				5E0CE2932167D05900BF4D39 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -260,17 +286,38 @@
 				5E88728E211DE73300BDA39B /* LaunchScreen.storyboard in Resources */,
 				5E88728B211DE73300BDA39B /* Assets.xcassets in Resources */,
 				5E887289211DE73200BDA39B /* Main.storyboard in Resources */,
+				5EA0E2B42167D15300537999 /* AutoMockable.stencil in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E0CE2932167D05900BF4D39 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nsourcery --sources ./Flashcards/ --templates ./Flashcards/Templates/ --output ./Flashcards/\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5E76F5382155C38000257C02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E76F53F2155C38000257C02 /* FlashcardsTests.swift in Sources */,
+				5EA0E2BC2167D5B600537999 /* RepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +336,8 @@
 				5E76F5372153176000257C02 /* UserRepository.swift in Sources */,
 				5E39E8712146B40E004F5566 /* Result.swift in Sources */,
 				5E887284211DE73200BDA39B /* AppDelegate.swift in Sources */,
+				5EA0E2B62167D1AC00537999 /* AutoMockable.generated.swift in Sources */,
+				5E0CE2922167CC8700BF4D39 /* AutoMockable.swift in Sources */,
 				5E8029A7212C2ADE00F3A2AC /* AuthViewController.swift in Sources */,
 				5E3CF9CA2131FB8400558F29 /* Store.swift in Sources */,
 				5ECE45B3212A2B4300CB0EED /* SourceRepository.swift in Sources */,
