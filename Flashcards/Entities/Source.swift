@@ -11,6 +11,12 @@ struct Source: Codable {
   let title: String
   let cards: [Card]?
   
+  init(cards: [Card]? = nil) {
+    self.id = 0
+    self.title = ""
+    self.cards = cards
+  }
+  
   func cardsCount() -> Int {
     return cards?.count ?? 0
   }

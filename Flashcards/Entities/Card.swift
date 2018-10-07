@@ -12,7 +12,14 @@ struct Card: Codable {
   
   let answersCount: Int
   let correctAnswersCount: Int
-  let incorrectAnswersCount: Int
+
+  init(answersCount: Int = 0, correctAnswersCount: Int = 0) {
+    self.id = 0
+    self.content = ""
+    
+    self.answersCount = answersCount
+    self.correctAnswersCount = correctAnswersCount
+  }
   
   func correctPercentage() -> Double {
     return Double(correctAnswersCount) / Double(answersCount) * 100.0

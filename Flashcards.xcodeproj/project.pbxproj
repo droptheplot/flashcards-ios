@@ -29,6 +29,8 @@
 		5EA0E2B62167D1AC00537999 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA0E2B52167D1AC00537999 /* AutoMockable.generated.swift */; };
 		5EA0E2BC2167D5B600537999 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA0E2B92167D57100537999 /* RepositoryTests.swift */; };
 		5EA8932D21319D3E00E55238 /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8932C21319D3E00E55238 /* CardRepository.swift */; };
+		5EBD765F216AA4210031BB0F /* SourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD765E216AA4210031BB0F /* SourceTests.swift */; };
+		5EBD7661216AA9270031BB0F /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD7660216AA9270031BB0F /* CardTests.swift */; };
 		5ECE45B1212A229000CB0EED /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECE45B0212A229000CB0EED /* Source.swift */; };
 		5ECE45B3212A2B4300CB0EED /* SourceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECE45B2212A2B4300CB0EED /* SourceRepository.swift */; };
 		5ED824A5212DC63F00C9595D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED824A4212DC63F00C9595D /* User.swift */; };
@@ -71,6 +73,8 @@
 		5EA0E2B52167D1AC00537999 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		5EA0E2B92167D57100537999 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoryTests.swift; path = FlashcardsTests/Repositories/RepositoryTests.swift; sourceTree = SOURCE_ROOT; };
 		5EA8932C21319D3E00E55238 /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardRepository.swift; path = Flashcards/Repositories/CardRepository.swift; sourceTree = SOURCE_ROOT; };
+		5EBD765E216AA4210031BB0F /* SourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceTests.swift; sourceTree = "<group>"; };
+		5EBD7660216AA9270031BB0F /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardTests.swift; path = FlashcardsTests/Entities/CardTests.swift; sourceTree = SOURCE_ROOT; };
 		5ECE45B0212A229000CB0EED /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		5ECE45B2212A2B4300CB0EED /* SourceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceRepository.swift; sourceTree = "<group>"; };
 		5ED824A4212DC63F00C9595D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		5E76F53D2155C38000257C02 /* FlashcardsTests */ = {
 			isa = PBXGroup;
 			children = (
+				5EBD765D216AA4210031BB0F /* Entities */,
 				5EA0E2BD2167D5BC00537999 /* Repositories */,
 				5E76F5402155C38000257C02 /* Info.plist */,
 			);
@@ -191,6 +196,15 @@
 				5EA0E2B92167D57100537999 /* RepositoryTests.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5EBD765D216AA4210031BB0F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5EBD765E216AA4210031BB0F /* SourceTests.swift */,
+				5EBD7660216AA9270031BB0F /* CardTests.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +331,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EBD7661216AA9270031BB0F /* CardTests.swift in Sources */,
+				5EBD765F216AA4210031BB0F /* SourceTests.swift in Sources */,
 				5EA0E2BC2167D5B600537999 /* RepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
